@@ -1,0 +1,34 @@
+/**
+ * Vars
+ */
+$fg: #404040;
+$bg: #ECECEC;
+
+/**
+ * General
+ */
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background: $bg;
+  color: $fg;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-logo {
+  display: inline-block;
+}
+
+/**
+ * Layout
+ */
+.view {
+  background: white;
+}
+

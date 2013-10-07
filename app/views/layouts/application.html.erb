@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+  <head>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <title>Sandbox</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="container">
+          <div class="inner row">
+            <div class="content col-lg-12">
+              <span class="label label-info">Branding</span>
+              <h1 class="site-title">
+                <%= link_to image_tag("logo.svg", :width => 100, :alt => "Site logo"), '/' %>
+                Sandbox
+              </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="view">
+        <div class="container">
+          <div class="inner row col-lg-12">
+              <span class="label label-info">View</span>
+              <%= yield %>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="inner row ">
+            <div class="content col-lg-12">
+              <span class="label label-info">Closure</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<h2>Posts</h2>
+<%= link_to 'New post', new_post_path, :class => "btn btn-primary btn-sm" %>
+<table class="table table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Updated</th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= link_to post.title, post %></td>
+    <td><%= truncate(strip_tags(post.text), :length => 50) %></td>
+    <td><%= post.updated_at.strftime("%Y.%m.%d %H:%M") %></td>
+    <td>
+      <%= link_to 'Edit', edit_post_path(post), :class => "btn btn-default btn-xs" %>
+      <%= link_to 'Delete', post_path(post), :class => "btn btn-danger btn-xs",
+                              method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+<% end %>
+</table>
